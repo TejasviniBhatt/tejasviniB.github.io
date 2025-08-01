@@ -730,92 +730,40 @@
             }
         }
 
-        /* Job Market Notification Bar */
-        .job-market-notification {
-            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
-            background-size: 400% 400%;
-            color: white;
+        /* Internship Notification Bar */
+        .internship-notification {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            color: #155724;
             text-align: center;
             padding: 12px 18px;
             cursor: pointer;
             position: relative;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
+            border: 1px solid #c3e6cb;
             font-weight: 500;
             font-size: 1rem;
             transition: all 0.3s ease;
-            animation: gradientShift 4s ease infinite;
             overflow: hidden;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             max-width: 100%;
+            white-space: nowrap;
         }
 
-        .job-market-notification::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            animation: shimmer 3s linear infinite;
-            transform: rotate(45deg);
+        .internship-notification:hover {
+            background: linear-gradient(135deg, #c3e6cb, #b8dcc0);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        .job-market-notification::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, 
-                transparent 0%, 
-                rgba(255,255,255,0.05) 20%, 
-                rgba(255,255,255,0.1) 50%, 
-                rgba(255,255,255,0.05) 80%, 
-                transparent 100%);
-            animation: wave 2s ease-in-out infinite;
-            pointer-events: none;
-        }
-
-        .job-market-notification:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-            animation-duration: 2s;
-        }
-
-        .job-market-notification i {
+        .internship-notification i {
             margin-right: 8px;
-            animation: gentlePulse 2s ease-in-out infinite;
             position: relative;
             z-index: 1;
         }
 
-        .job-market-notification span {
+        .internship-notification span {
             position: relative;
             z-index: 1;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-
-        @keyframes wave {
-            0%, 100% { transform: translateX(-100%); }
-            50% { transform: translateX(100%); }
-        }
-
-        @keyframes gentlePulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.9; }
         }
 
         /* Toast notification for feedback */
@@ -841,7 +789,7 @@
         }
 
         @media (max-width: 768px) {
-            .job-market-notification {
+            .internship-notification {
                 padding: 10px 15px;
                 font-size: 0.9rem;
                 margin-bottom: 18px;
@@ -982,10 +930,10 @@
             <!-- About Section -->
             <section id="about" class="profile-section">
                 <div class="profile-text">
-                    <!-- Job Market Notification Bar -->
-                    <div class="job-market-notification" onclick="copyEmail()" title="Click to copy email address" style="margin-bottom: 20px; border-radius: 12px;">
+                    <!-- Internship Notification Bar -->
+                    <div class="internship-notification" onclick="copyEmail()" title="Click to copy email address" style="margin-bottom: 20px; border-radius: 12px;">
                         <i class="fas fa-briefcase"></i>
-                        <span>I am currently on the job market. Feel free to connect!</span>
+                        <span>Actively seeking internship roles in Economics & Finance- contact me!</span>
                     </div>
                     <p>I'm a Master's student in Economics and Finance at the University of Tübingen, with a focus on computational finance and asset pricing. I'm interested in how financial markets function and how data-driven methods can help us better understand investment decisions and risk. As part of my coursework, I'm also learning how to apply machine learning techniques to problems in finance and economics.</p>
 
